@@ -1,0 +1,19 @@
+Docker :
+docker-machine ip default // to get ip of image
+
+docker build -t myimage .
+docker run -it -p 3000:3000  myimage bash
+docker run -it -p 8080:3000 -v `pwd`:/test myimage bash
+Rails :
+
+bundle exec rails s -p 3000 -b '0.0.0.0'
+GO TO http://192.168.99.100:8080/
+
+
+Shared :
+cd /Users/Shared/
+mkdir my_shared
+cd my_shared
+docker run -it -p 8080:3000 -v `pwd`:/test myimage bash
+
+run docker then go to /test and youhou
