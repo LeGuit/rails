@@ -17,3 +17,4 @@ cd my_shared
 docker run -it -p 8080:3000 -v `pwd`:/test myimage bash
 
 run docker then go to /test and youhou
+http://192.168.99.100:8080/
